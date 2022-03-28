@@ -1,0 +1,13 @@
+**.h5
+**.zip
+*pyc
+exercise_3
+.ipynb_checkpoints
+**/.ipynb_checkpoints
+pointnet_data
+mi3dmap/**.las
+mi3dmap/**.obj
+SensatUrban/ply/**
+scannobjectnn/h5_files
+scannobjectnn/object_dataset
+ModelNet*
