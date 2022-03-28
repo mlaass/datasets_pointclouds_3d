@@ -26,7 +26,7 @@ if __name__ == "__main__":
         groupname = f.replace("/", "_").replace(ext, "")
         #print(f"Loaded a dataset of {str(xyz.shape)}, {groupname}")
 
-        with h5py.File(sys.argv[2], "a") as f:
+        with h5py.File(sys.argv[1], "a") as f:
             grp = f.require_group(groupname)
             grp.create_dataset("coords", data=xyz)
     for f in tqdm(files):

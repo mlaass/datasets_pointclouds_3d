@@ -1,0 +1,3 @@
+[submodule "SensatUrban/SensatUrban"]
+	path = SensatUrban/SensatUrban
+	url = git@github.com:QingyongHu/SensatUrban.git

@@ -8,6 +8,7 @@ pointnet_data
 mi3dmap/**.las
 mi3dmap/**.obj
 SensatUrban/ply/**
-scannobjectnn/h5_files
-scannobjectnn/object_dataset
+scanobjectnn/h5_files
+scanobjectnn/object_dataset
 ModelNet*
+__MACOSX/

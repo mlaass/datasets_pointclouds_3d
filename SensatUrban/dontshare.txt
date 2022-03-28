@@ -1,0 +1,18 @@
+https://github.com/QingyongHu/SensatUrban
+https://drive.google.com/drive/folders/1xd6oc0yJFQ74r54zVJCTGypohvv7ajXG?usp=sharing
+
+Thanks for your interest in our work! You can download the dataset through the following links: 
+
+> ply format: 
+   https://drive.google.com/drive/folders/1xd6oc0yJFQ74r54zVJCTGypohvv7ajXG?usp=sharing
+
+Please download through this link if you are in China:
+https://pan.baidu.com/s/1gRhx54Iruvb0GGSYsFmGfg   
+code: lvtr
+
+>Evaluation server: https://competitions.codalab.org/competitions/31519
+
+>Urban3D Challenge@ICCV'21: https://urban3dchallenge.github.io/
+
+
+For any questions or problems contact us at: qingyong.hu@cs.ox.ac.uk
