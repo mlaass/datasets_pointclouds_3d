@@ -109,6 +109,34 @@ https://github.com/QingyongHu/SensatUrban
 For any questions or problems contact us at: qingyong.hu@cs.ox.ac.uk
 ```
 
+##  KITTI Vision Benchmark - Semantic Kitti
+
+License
+Our dataset is based on the KITTI Vision Benchmark and therefore we distribute the data under Creative Commons Attribution-NonCommercial-ShareAlike license. You are free to share and adapt the data, but have to give appropriate credit and may not use the work for commercial purposes.
+
+Specifically you should cite our work (PDF):
+
+```bibtex
+@inproceedings{behley2019iccv,
+  author = {J. Behley and M. Garbade and A. Milioto and J. Quenzel and S. Behnke and C. Stachniss and J. Gall},
+  title = {{SemanticKITTI: A Dataset for Semantic Scene Understanding of LiDAR Sequences}},
+  booktitle = {Proc. of the IEEE/CVF International Conf.~on Computer Vision (ICCV)},
+  year = {2019}
+}
+```
+
+But also cite the original KITTI Vision Benchmark:
+
+```bibtex
+@inproceedings{geiger2012cvpr,
+  author = {A. Geiger and P. Lenz and R. Urtasun},
+  title = {{Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite}},
+  booktitle = {Proc.~of the IEEE Conf.~on Computer Vision and Pattern Recognition (CVPR)},
+  pages = {3354--3361},
+  year = {2012}
+}
+```
+
 
 
 # Links

@@ -12,3 +12,4 @@ scanobjectnn/h5_files
 scanobjectnn/object_dataset
 ModelNet*
 __MACOSX/
+kitti/dataset
