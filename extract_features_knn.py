@@ -22,9 +22,8 @@ files = [f for f in files if not (f.endswith(
     '_features.h5') or f == f'{config["datapath"]}sensat_urban.h5')]
 print(files)
 
-files = [f'{config["datapath"]}sensat_urban.h5']
 
-for file in files[:]:
+for file in files[:1]:
     outfile = f'{file[:-3]}_features.h5'
     print("******* extract: ", file, "->", outfile)
 

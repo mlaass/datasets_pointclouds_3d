@@ -18,7 +18,9 @@ if __name__ == "__main__":
     hf = h5py.File(out_file, "w")
 
     print(root_dir, "-->", out_file)
-    for flab in tqdm(glob.glob(f'{root_dir}**/*.label', recursive=True)):
+    unq_labels = []
+    unq_objects = []
+    for flab in tqdm(glob.glob(f'{root_dir}**/*.label', recursive=True)[:]):
 
         fpc = flab.replace('labels', 'velodyne').replace('.label', '.bin')
         groupname = fpc[len(root_dir):-4].replace("velodyne/",
@@ -27,13 +29,22 @@ if __name__ == "__main__":
 
         grp = hf.require_group(groupname)
         lidar = np.fromfile(fpc, dtype=np.float32).reshape(-1, 4)
-        lbl = np.fromfile(flab, dtype=np.uint32)
+        lbl = np.fromfile(flab, dtype=np.uint32).reshape(-1)
+        labels = ((lbl) & 0xffff).astype(np.uint16)
+        objects = (lbl >> 16).astype(np.uint16)
 
         coords = lidar[:, 0:3]
         if coords.shape[0] != lbl.shape[0]:
             print("ERR", groupname)
             print(lidar.shape, lbl.shape)
         grp.create_dataset("coords", data=coords)
-        grp.create_dataset("labels", data=lbl)
-        # print(pc.shape)
+        grp.create_dataset("labels", data=labels)
+        grp.create_dataset("objects", data=objects)
+        unq_labels.extend(np.unique(labels))
+        unq_objects.extend(np.unique(objects))
+        unq_objects = list(set(unq_objects))
+        unq_labels = list(set(unq_labels))
+        #print(lbl[:3], labels[:3], objects[:3])
+    print(len(unq_labels), len(unq_objects))
+    # print(sorted(unq_labels), sorted(unq_objects))
     hf.close()
