@@ -46,5 +46,5 @@ if __name__ == "__main__":
         unq_labels = list(set(unq_labels))
         #print(lbl[:3], labels[:3], objects[:3])
     print(len(unq_labels), len(unq_objects))
-    # print(sorted(unq_labels), sorted(unq_objects))
+    print(sorted(unq_labels), sorted(unq_objects))
     hf.close()

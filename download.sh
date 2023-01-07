@@ -1,6 +1,7 @@
 echo "Go to the following websites and fill the forms and donwload scanobjectsnn and SensatUrban datasets to their respective folders"
 cat ./scanobjectnn/link.txt
 cat ./SensatUrban/link.txt
+cat ./kitti/link.txt
 echo "download mi3dmap scene 1"
 #curl http://mi3dmap.net/download.jsp?fileNo=AT1glyuSrFX8QNCm --output mi3dmap/scene1.rar
 unrar e mi3dmap/scene1.rar mi3dmap/
@@ -19,3 +20,16 @@ unzip ModelNet10.zip
 echo "download ModelNet40"
 wget http://modelnet.cs.princeton.edu/ModelNet40.zip
 unzip ModelNet40.zip
+
+echo "download kitti"
+cd kitti
+wget "http://semantic-kitti.org/assets/data_odometry_labels.zip"
+# download 
+echo "unzip kitti"
+unzip data_odometry_labels.zip
+unzip data_odometry_velodyne.zip
+echo "convert kitti"
+./kitti2atlas.py dataset/sequences/ ../data/kitti-semantic.h5
+cd ..
+
+
